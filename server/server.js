@@ -1,10 +1,12 @@
 import express from 'express';
 import dotenv from "./config/dotenv.js"
 import giftsRouter from "./routes/gifts.js";
-const app = express(); 
+import cors from "cors"; 
 
-app.use("/public", express.static("./public"));
-app.use("/scripts", express.static("./public/scripts"));
+const app = express(); 
+app.use(cors());
+app.use(express.json());
+
 app.use("/gifts", giftsRouter);
 app.get("/", (req, res) => {
     res.status(200).send(
