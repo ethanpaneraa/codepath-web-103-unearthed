@@ -63,4 +63,6 @@ export default {
     fetchGifts,
     fetchGiftById,  
     createGift, 
+    updateGift, 
+    deleteGift, 
 };
