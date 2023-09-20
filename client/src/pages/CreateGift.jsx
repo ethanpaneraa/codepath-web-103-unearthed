@@ -33,7 +33,8 @@ const CreateGift = () => {
             body: JSON.stringify(gift),
         }
         
-        fetch('http://localhost:3000/gifts/',options);
+        const response = fetch('http://localhost:3000/gifts/',options);
+        console.log("response:", response); 
         window.location = "/";
     }
 

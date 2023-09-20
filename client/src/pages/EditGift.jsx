@@ -37,7 +37,8 @@ const EditGift = ({data}) => {
         }
         
         const url = 'http://localhost:3000/gifts/'+id;
-        fetch(url, options);
+        const response = fetch(url, options);
+        console.log("response:", response)
         window.location = "/";
     }
 
@@ -51,7 +52,8 @@ const EditGift = ({data}) => {
         
         const url = 'http://localhost:3000/gifts/'+id;
 
-        fetch(url, options);
+        const response = fetch(url, options);
+        console.log("response:", response);
         window.location = "/";
     }
 
